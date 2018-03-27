@@ -1,0 +1,104 @@
+.HeroPanel {
+  z-index: 1;
+  position: relative;
+  height: 100vh;
+  .--withTopPadding {
+    @include for-size(tablet-portrait-up) {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: url('../img/hero-small.jpg') no-repeat top center;
+    background-size: cover;
+    height: 100%;
+  }
+  &-top {
+    height: 60vh;
+    @include for-size(tablet-portrait-up) {
+      height: auto;
+    }
+  }
+  &-bottom {
+    height: 40vh;
+    background: #fff;
+    @include for-size(tablet-portrait-up) {
+      height: auto;
+      background: none;
+    }
+  }
+  &-title {
+    font-size: 26px;
+    color: #fff;
+    line-height: 1.6;
+    padding: 120px 32px 0;
+    @include for-size(tablet-portrait-up) {
+      font-size: 36px;
+      padding: 0;
+    }
+  }
+  &-subTitle {
+    display: none;
+    @include for-size(desktop-up) {
+      margin-top: 50px;
+      display: block;
+      color: #fff;
+      font-size: 20px;
+      line-height: 2;
+      font-weight: 300;
+    }
+  }
+  &-highlight {
+    color: #67E9D7;
+  }
+  &-flow {
+    background: #fff;
+    padding: 40px 50px;
+    @include for-size(desktop-up) {
+      border-radius: 8px;
+      padding: 44px 40px 48px;
+      box-shadow: 0 16px 40px 0 rgba(0,0,0,.32);
+    }
+  }
+  &-flowTitle {
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 32px;
+    @include for-size(desktop-up) {
+      font-size: 20px;
+      margin-bottom: 44px;
+    }
+  }
+  &-label {
+    display: block;
+    font-size: 16px;
+    color: #BEBEBE;
+    margin-bottom: 14px;
+  }
+  &-flowInput {
+    font-size: 16px;
+    color: #BBB;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid #BEBEBE;
+    padding-bottom: 8px;
+    width: 100%;
+    margin-bottom: 32px;
+    outline: none;
+    @include for-size(desktop-up) {
+      margin-bottom: 50px;
+    }
+  }
+  &-flowBtn {
+    @include generic-button;
+  }
+}

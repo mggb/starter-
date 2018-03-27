@@ -1,0 +1,46 @@
+.HowItWork{
+   padding: 8rem 1.6rem;
+
+
+  &-Why-Title{
+    margin: 0 auto 1.6rem;
+    font-size: 1.5rem;
+    color: #4d7fd5;
+    font-weight: 600;
+  }
+  &-image{
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+  &-explication-contain{
+    margin-bottom: 2rem;
+    line-height: 2;
+    display: flex;
+flex-wrap: nowrap;
+    padding-bottom: 1rem;
+  }
+  &-explication-container{
+    width: 60%;
+padding-left: 6%;
+  }
+  &-Why{
+    padding-top: 6%;
+    padding-left: 9%;
+  }
+}
+
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  .HowItWork{
+
+&-Why{
+  padding-bottom: 2rem;
+}
+&-explication-container{
+      width: 100%;
+}
+&-image{
+  margin-right: 4rem;
+}
+}
+}
